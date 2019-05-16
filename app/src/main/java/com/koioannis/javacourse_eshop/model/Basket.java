@@ -1,9 +1,8 @@
 
-package model;
+package com.koioannis.javacourse_eshop.model;
 
 import java.math.BigDecimal;
 import java.util.List;
-
 
 public class Basket {
 	

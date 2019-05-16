@@ -1,16 +1,9 @@
-
-package test;
+package com.koioannis.javacourse_eshop.test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import model.Cashier;
-import model.Constants;
-import model.Coupon;
-import model.Customer;
-import model.Membership;
-import model.Product;
-
+import com.koioannis.javacourse_eshop.model.*;
 
 public class DataHelper {
 	

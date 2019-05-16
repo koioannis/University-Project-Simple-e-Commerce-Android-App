@@ -1,11 +1,10 @@
-
-package myUtil;
+package com.koioannis.javacourse_eshop.myUtil;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import model.Constants;
+import com.koioannis.javacourse_eshop.model.*;
 
 
 public class DateTools {

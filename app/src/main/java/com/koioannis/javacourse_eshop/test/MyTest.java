@@ -1,8 +1,7 @@
+package com.koioannis.javacourse_eshop.test;
 
-package test;
-
-import model.Shop;
-import myUtil.DateTools;
+import com.koioannis.javacourse_eshop.model.Shop;
+import com.koioannis.javacourse_eshop.myUtil.DateTools;
 
 
 
@@ -21,7 +20,7 @@ public class MyTest {
 		myShop.setExistingCustomers(DataHelper.createSomeCustomers());
 		myShop.setExistingCoupons(DataHelper.createSomeCoupons());
 		myShop.setExistingMemberships(DataHelper.createSomeMemberships());
-		//myShop.setExistingCashiers(DataHelper.createSomeCashiers());
+		//myShop.setExistingCashiers(DataHelper.createSomeCashiers());	
 
 
 		

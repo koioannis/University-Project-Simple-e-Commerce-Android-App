@@ -1,10 +1,10 @@
 
-package bizlogic;
+package com.koioannis.javacourse_eshop.bizlogic;
 
 
 public class BillingController {
 	
-	// implemet a method with name startBilling that updates the Basket.isOpen = false  
+	// implement a method with name startBilling that updates the Basket.isOpen = false
 	
 	// methods about billing run if basket is closed. 
 	
