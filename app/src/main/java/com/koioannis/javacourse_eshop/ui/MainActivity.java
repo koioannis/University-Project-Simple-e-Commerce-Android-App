@@ -33,5 +33,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    protected void addBasket(View view){
+        view.setVisibility(View.INVISIBLE);
+    }
+
 
 }

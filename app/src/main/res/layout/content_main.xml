@@ -42,7 +42,9 @@
                             android:text="Price: 1000€"
                             android:textSize="20sp"/>
 
-                <ImageButton android:layout_width="wrap_content"
+                <ImageButton
+                             android:onClick="addBasket"
+                             android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
                              android:background="@drawable/ic_add_basket"
                              android:layout_marginStart="220dp"/>

@@ -39,12 +39,12 @@
                     android:fontFamily="@font/roboto_mono_bold"/>
         </android.support.v7.widget.Toolbar>
 
-        <FrameLayout android:layout_width="match_parent"
-                     android:layout_height="match_parent">
+        <FrameLayout android:layout_width="wrap_content"
+                     android:layout_height="wrap_content">
 
             <View
                     android:alpha="1"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="6dp"
                     android:background="@drawable/toolbar_shadow"/>
 
@@ -52,6 +52,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <include layout="@layout/content_activity_checkout"/>
 
     <Button
             android:layout_width="wrap_content"
