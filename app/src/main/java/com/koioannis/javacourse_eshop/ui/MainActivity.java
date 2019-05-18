@@ -35,7 +35,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void addBasket(View view){
-        ((ImageButton) view).setImageResource(R.drawable.ic_done);
+        ImageButton button = ((ImageButton) view);
+        if (button.getBackground().equals(getDrawable(R.drawable.ic_done))) {
+            button.setBackgroundResource(R.drawable.ic_add_basket);
+        } else {
+            button.setBackgroundResource(R.drawable.ic_done);
+        }
     }
 
 

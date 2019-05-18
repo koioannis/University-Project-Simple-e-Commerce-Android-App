@@ -25,10 +25,11 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:background="#ffffff"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
                     android:src="@drawable/ic_account"/>
             <TextView
-                    android:textColor="#1E88E5"
+                    android:textColor="@color/colorAccent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="E-SHOP"
