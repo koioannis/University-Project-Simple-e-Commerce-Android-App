@@ -9,12 +9,14 @@
         tools:showIn="@layout/activity_main"
         tools:context=".ui.MainActivity">
     <LinearLayout
+            android:id="@+id/outterLinearLayout"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:divider="?android:dividerHorizontal"
             android:showDividers="middle">
         <LinearLayout
+                android:id="@+id/linearLayout0"
                 android:layout_marginTop="2dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -35,14 +37,15 @@
                     android:layout_marginBottom="6dp">
                 <TextView   android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="SumSang Smart Fridge"
+                            android:text="SumSang Fridge"
                             android:textSize="25sp"/>
                 <TextView   android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Price: 1000€"
+                            android:text="Price: 600€"
                             android:textSize="20sp"/>
 
                 <ImageButton
+                             android:tag="0"
                              android:onClick="addBasket"
                              android:layout_width="wrap_content"
                              android:layout_height="wrap_content"
@@ -53,6 +56,7 @@
         </LinearLayout>
 
         <LinearLayout
+                android:id="@+id/linearLayout1"
                 android:layout_marginTop="2dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -73,7 +77,7 @@
                     android:layout_marginBottom="6dp">
                 <TextView   android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="2019 8 core proccecor"
+                            android:text="2019 8 core android"
                             android:textSize="25sp"/>
                 <TextView   android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -81,6 +85,7 @@
                             android:textSize="20sp"/>
 
                 <ImageButton
+                        android:tag="1"
                         android:onClick="addBasket"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -91,6 +96,7 @@
         </LinearLayout>
 
         <LinearLayout
+                android:id="@+id/linearLayout2"
                 android:layout_marginTop="2dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -119,6 +125,7 @@
                             android:textSize="20sp"/>
 
                 <ImageButton
+                            android:tag="2"
                             android:onClick="addBasket"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -129,6 +136,7 @@
         </LinearLayout>
 
         <LinearLayout
+                android:id="@+id/linearLayout3"
                 android:layout_marginTop="2dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -157,6 +165,7 @@
                             android:textSize="20sp"/>
 
                 <ImageButton
+                        android:tag="3"
                         android:onClick="addBasket"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

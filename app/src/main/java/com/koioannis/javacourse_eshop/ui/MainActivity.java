@@ -9,8 +9,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
 import com.koioannis.javacourse_eshop.R;
+import com.koioannis.javacourse_eshop.bizlogic.AdminController;
+import com.koioannis.javacourse_eshop.bizlogic.OrderController;
 
 public class MainActivity extends AppCompatActivity {
+    AdminController adminController;
+    OrderController orderController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,15 +36,15 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(checkoutActivity);
             }
         });
+        adminController = AdminController.getInstance();
+        orderController = OrderController.getInstance();
+
     }
 
     protected void addBasket(View view){
-        ImageButton button = ((ImageButton) view);
-        if (button.getBackground().equals(getDrawable(R.drawable.ic_done))) {
-            button.setBackgroundResource(R.drawable.ic_add_basket);
-        } else {
-            button.setBackgroundResource(R.drawable.ic_done);
-        }
+        int tag = Integer.parseInt(view.getTag().toString());
+        orderController.addProduct(tag);
+        view.setBackgroundResource(R.drawable.ic_done);
     }
 
 

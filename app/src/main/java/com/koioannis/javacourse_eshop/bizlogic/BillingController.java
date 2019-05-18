@@ -1,21 +1,31 @@
-
 package com.koioannis.javacourse_eshop.bizlogic;
 
+import com.koioannis.javacourse_eshop.model.Coupon;
 
 public class BillingController {
-	
-	// implement a method with name startBilling that updates the Basket.isOpen = false
-	
-	// methods about billing run if basket is closed. 
-	
-	// implement a method that creates an Invoice for a Customer and a Basket (after checking that the basket belongs to this customer).
-	
-	// implement a method that checks whether an invoice is fully received: ie amountDue is zero.
-	
-	// implement a method that makes the payment: updates the amount fields in invoice.
-	
-	// implement a method that cancels a payment.
-	
-	// do not forget to check for negative amounts etc.
-	
+    private static final BillingController INSTANCE = new BillingController();
+    public static BillingController getInstance () {
+        return INSTANCE;
+    }
+    private double totalPrice;
+    private Coupon coupon;
+
+    private BillingController(){
+        totalPrice = 0.0;
+    }
+
+    public double getTotalPrice(String code){
+        OrderController orderController = OrderController.getInstance();
+        totalPrice =0;
+        for (int i =0; i < orderController.getProductsCount(); i++){
+            totalPrice += orderController.getProductPrice(i);
+        }
+
+        int discount = AdminController.getInstance().getReduction(code);
+        if (discount != -1){
+            totalPrice = totalPrice - (totalPrice/100 * discount);
+        }
+
+        return totalPrice;
+    }
 }
