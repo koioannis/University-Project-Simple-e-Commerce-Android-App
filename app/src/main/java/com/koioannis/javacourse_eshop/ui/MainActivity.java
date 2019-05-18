@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             button.setBackgroundResource(R.drawable.ic_done);
         }
-
     }
 
 
