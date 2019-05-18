@@ -9,19 +9,15 @@ public class Product {
 	private String code;
 	private BigDecimal price;
 	private String name;
-	private String description;
-	private Constants.ProductCategory category;
 
 
 	public Product() {
 	}
 
-	public Product(String code, BigDecimal price, String name, String description, Constants.ProductCategory category) {
+	public Product(String code, BigDecimal price, String name, String description) {
 		this.code = code;
 		this.price = price;
 		this.name = name;
-		this.description = description;
-		this.category = category;
 	}
 
 	public Product(String code) {
@@ -44,21 +40,6 @@ public class Product {
 		this.price = price;
 	}
 
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Constants.ProductCategory getCategory() {
-		return category;
-	}
-
-	public void setCategory(Constants.ProductCategory category) {
-		this.category = category;
-	}
 
 	public String getName() {
 		return name;
