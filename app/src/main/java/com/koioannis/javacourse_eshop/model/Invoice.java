@@ -15,7 +15,6 @@ public class Invoice {
 	private BigDecimal totalOrder;
 	private List<Product> orderedProducts;
 	private Date date;
-	private Cashier cashier;
 	private BigDecimal amountReceived;
 	private BigDecimal amountDue;
 
@@ -25,13 +24,12 @@ public class Invoice {
 	public Invoice() {
 	}
 
-	public Invoice(String seq, String firstName, String lastName, Customer customer, List<Product> orderedProducts, Cashier cashier) {
+	public Invoice(String seq, String firstName, String lastName, Customer customer, List<Product> orderedProducts) {
 		this.seq = seq;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.customer = customer;
 		this.orderedProducts = orderedProducts;
-		this.cashier = cashier;
 	}
 	
 	public String getSeq() {
@@ -92,14 +90,6 @@ public class Invoice {
 
 	public void setDate(Date date) {
 		this.date = date;
-	}
-
-	public Cashier getCashier() {
-		return cashier;
-	}
-
-	public void setCashier(Cashier cashier) {
-		this.cashier = cashier;
 	}
 
 	public BigDecimal getAmountReceived() {
