@@ -2,6 +2,8 @@ package com.koioannis.javacourse_eshop.bizlogic;
 
 import com.koioannis.javacourse_eshop.model.Coupon;
 
+import java.text.DecimalFormat;
+
 public class BillingController {
     private static final BillingController INSTANCE = new BillingController();
     public static BillingController getInstance () {
@@ -16,6 +18,7 @@ public class BillingController {
 
     public double getTotalPrice(String code){
         OrderController orderController = OrderController.getInstance();
+        DecimalFormat decimalFormat = new DecimalFormat("#0.00");
         totalPrice =0;
         for (int i =0; i < orderController.getProductsCount(); i++){
             totalPrice += orderController.getProductPrice(i);
@@ -26,6 +29,6 @@ public class BillingController {
             totalPrice = totalPrice - (totalPrice/100 * discount);
         }
 
-        return totalPrice;
+        return Double.parseDouble(decimalFormat.format(totalPrice));
     }
 }

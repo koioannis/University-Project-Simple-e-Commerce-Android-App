@@ -373,4 +373,26 @@
             android:layout_height="wrap_content" android:layout_marginBottom="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
             app:layout_constraintStart_toEndOf="@+id/coupon"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_gravity="bottom|end"
+            android:background="@drawable/ripple_background"
+            android:text="checkout"
+            android:padding="10dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/roboto_mono_bold"
+            app:layout_anchorGravity="bottom|right|end"
+            android:id="@+id/checkoutBtn"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/totalCost" android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
+            app:layout_constraintHorizontal_bias="1.0"/>
+
+
 </android.support.constraint.ConstraintLayout>

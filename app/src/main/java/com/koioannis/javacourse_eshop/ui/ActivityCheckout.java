@@ -1,5 +1,6 @@
 package com.koioannis.javacourse_eshop.ui;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import com.koioannis.javacourse_eshop.R;
 import com.koioannis.javacourse_eshop.bizlogic.BillingController;
@@ -35,8 +37,16 @@ public class ActivityCheckout extends AppCompatActivity {
         totalCost = findViewById(R.id.totalCost);
         displayProducts();
 
-    }
+        Button checkoutBtn = findViewById(R.id.checkoutBtn);
+        checkoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                Intent paymentActivity = new Intent(ActivityCheckout.this, PaymentActivity.class);
+                ActivityCheckout.this.startActivity(paymentActivity);
+            }
+        });
 
+    }
     private void displayProducts(){
         orderController = OrderController.getInstance();
         billingController = BillingController.getInstance();
@@ -139,7 +149,5 @@ public class ActivityCheckout extends AppCompatActivity {
 
         return findViewById(id);
     }
-
-
 
 }

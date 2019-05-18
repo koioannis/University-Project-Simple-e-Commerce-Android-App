@@ -19,7 +19,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:popupTheme="@style/AppTheme.PopupOverlay">
             <ImageButton
-                    android:onClick="toMainActivity"
+                    android:onClick="toCheckoutActivtiy"
                     android:id="@+id/searchImageButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
                     android:textColor="#1E88E5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="CART"
+                    android:text="CHECKOUT"
                     android:textSize="25sp"
                     android:id="@+id/toolbar_title"
                     android:textStyle="bold"
@@ -53,6 +53,14 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_activity_checkout"/>
+    <include layout="@layout/content_payment"/>
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_dialog_email"/>
 
 </android.support.design.widget.CoordinatorLayout>
