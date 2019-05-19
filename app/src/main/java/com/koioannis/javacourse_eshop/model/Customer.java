@@ -3,7 +3,7 @@ package com.koioannis.javacourse_eshop.model;
 
 public class Customer {
 
-	String name, email, address, postalCode, telephone;
+	String name, email, address, postalCode, phone;
 
 
 	public Customer(String name, String email, String address, String postalCode, String telephone) {
@@ -11,7 +11,7 @@ public class Customer {
 		this.email = email;
 		this.address = address;
 		this.postalCode = postalCode;
-		this.telephone = telephone;
+		this.phone = telephone;
 	}
 
 	public String getName() {
@@ -30,7 +30,7 @@ public class Customer {
 		return address;
 	}
 
-	public String getTelephone() {
-		return telephone;
+	public String getPhone() {
+		return phone;
 	}
 }

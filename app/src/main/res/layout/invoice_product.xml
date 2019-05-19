@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:id="@+id/invoice_product"
+                      android:orientation="horizontal"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/productName"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:text="SumSang Fridge"
+                android:fontFamily="@font/roboto_mono"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+        <TextView
+                android:id="@+id/productQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="x1"
+                android:fontFamily="@font/roboto_mono"
+                android:gravity="end"/>
+        <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="1000€"
+                android:maxLines="1"
+                android:fontFamily="@font/roboto_mono"/>
+</LinearLayout>

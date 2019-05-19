@@ -13,7 +13,7 @@ public class AdminController {
     private List<Product> productList;
     private List<Coupon> couponList;
 
-    private static final AdminController INSTANCE = new AdminController();
+    private static AdminController INSTANCE;
 
     public static AdminController getInstance () {
         return INSTANCE;
@@ -46,6 +46,12 @@ public class AdminController {
                 return coupon.getPercentageReduction();
         }
         return -1;
+    }
+
+    public static void instantiateApp(){
+        INSTANCE = new AdminController();
+        OrderController.instantiateOrderController();
+        BillingController.instantiateBillingController();
     }
 
 

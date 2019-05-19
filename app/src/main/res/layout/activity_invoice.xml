@@ -52,6 +52,7 @@
                         android:layout_marginEnd="6dp">
 
                     <TextView
+                            android:id="@+id/name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="JOHN DOE"
@@ -59,6 +60,7 @@
                             android:textAlignment="viewEnd"/>
 
                     <TextView
+                            android:id="@+id/email"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="doe.john@gmail.com"
@@ -68,6 +70,7 @@
                             android:textAlignment="viewEnd"/>
 
                     <TextView
+                            android:id="@+id/phone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="692 342 1449"
@@ -77,6 +80,7 @@
                             android:textAlignment="viewEnd"/>
 
                     <TextView
+                            android:id="@+id/address"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Averof 2, Lamia, GR"
@@ -85,9 +89,20 @@
                             android:fontFamily="@font/roboto_mono"
                             android:textAlignment="viewEnd"/>
 
+                    <TextView
+                            android:id="@+id/postalCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="35100"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:fontFamily="@font/roboto_mono"
+                            android:textAlignment="viewEnd"/>
+
                 </LinearLayout>
 
                 <LinearLayout
+                        android:id="@+id/invoice_products"
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -99,113 +114,6 @@
                             android:text="TOTAL: 123€"
                             android:fontFamily="@font/roboto_bold"/>
 
-                    <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                        <TextView
-                                android:layout_width="105dp"
-                                android:layout_height="wrap_content"
-                                android:text="SumSang Fridge"
-                                android:fontFamily="@font/roboto_mono"
-                                android:ellipsize="end"
-                                android:maxLines="1"/>
-                        <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="6dp"
-                                android:text="x1"
-                                android:fontFamily="@font/roboto_mono"
-                                android:gravity="end"/>
-                        <TextView
-                                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:layout_marginStart="6dp"
-                                android:text="1000€"
-                                android:maxLines="1"
-                                android:fontFamily="@font/roboto_mono"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                        <TextView
-                                android:layout_width="105dp"
-                                android:layout_height="wrap_content"
-                                android:text="SumSang Fridge"
-                                android:fontFamily="@font/roboto_mono"
-                                android:ellipsize="end"
-                                android:maxLines="1"/>
-                        <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="6dp"
-                                android:text="x1"
-                                android:fontFamily="@font/roboto_mono"
-                                android:gravity="end"/>
-                        <TextView
-                                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:layout_marginStart="6dp"
-                                android:text="1000€"
-                                android:maxLines="1"
-                                android:fontFamily="@font/roboto_mono"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                        <TextView
-                                android:layout_width="105dp"
-                                android:layout_height="wrap_content"
-                                android:text="SumSang Fridge"
-                                android:fontFamily="@font/roboto_mono"
-                                android:ellipsize="end"
-                                android:maxLines="1"/>
-                        <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="6dp"
-                                android:text="x1"
-                                android:fontFamily="@font/roboto_mono"
-                                android:gravity="end"/>
-                        <TextView
-                                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:layout_marginStart="6dp"
-                                android:text="1000€"
-                                android:maxLines="1"
-                                android:fontFamily="@font/roboto_mono"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                        <TextView
-                                android:layout_width="105dp"
-                                android:layout_height="wrap_content"
-                                android:text="SumSang Fridge"
-                                android:fontFamily="@font/roboto_mono"
-                                android:ellipsize="end"
-                                android:maxLines="1"/>
-                        <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="6dp"
-                                android:text="x1"
-                                android:fontFamily="@font/roboto_mono"
-                                android:gravity="end"/>
-                        <TextView
-                                android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                android:layout_marginStart="6dp"
-                                android:text="1000€"
-                                android:maxLines="1"
-                                android:fontFamily="@font/roboto_mono"/>
-                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </android.support.constraint.ConstraintLayout>

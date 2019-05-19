@@ -15,7 +15,7 @@ public class OrderController {
 	private ArrayList<Integer> productsQuantity;
 	private ArrayList<Double> productsPrice;
 
-	private static final OrderController INSTANCE = new OrderController();
+	private static OrderController INSTANCE = new OrderController();
 
 	public static OrderController getInstance() {
 		return INSTANCE;
@@ -35,6 +35,10 @@ public class OrderController {
 		productsPrice.add(0d);
 		productsPrice.add(0d);
 
+	}
+
+	static void instantiateOrderController(){
+		INSTANCE = new OrderController();
 	}
 
 	public Basket getBasket(){
