@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:showIn="@layout/activity_checkout"
-        tools:context=".ui.ActivityCheckout" android:id="@+id/constraintLayout">
+        tools:context=".ui.CheckoutActivity" android:id="@+id/constraintLayout">
 
     <LinearLayout
             android:orientation="vertical"
@@ -364,7 +364,7 @@
             android:id="@+id/totalCost"
             android:alpha="1"
             android:textColor="#1E1E1E"
-            android:text="€2340"
+            android:text=""
             android:textAlignment="viewEnd"
             android:textStyle="bold"
             android:textSize="20dp"

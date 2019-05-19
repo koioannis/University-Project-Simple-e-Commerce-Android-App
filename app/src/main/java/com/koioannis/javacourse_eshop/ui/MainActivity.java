@@ -7,7 +7,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageButton;
 import com.koioannis.javacourse_eshop.R;
 import com.koioannis.javacourse_eshop.bizlogic.AdminController;
 import com.koioannis.javacourse_eshop.bizlogic.OrderController;
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent checkoutActivity = new Intent(MainActivity.this, ActivityCheckout.class);
+                Intent checkoutActivity = new Intent(MainActivity.this, CheckoutActivity.class);
                 MainActivity.this.startActivity(checkoutActivity);
             }
         });

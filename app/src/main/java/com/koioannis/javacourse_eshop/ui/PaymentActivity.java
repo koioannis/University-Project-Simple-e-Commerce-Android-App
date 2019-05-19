@@ -1,5 +1,6 @@
 package com.koioannis.javacourse_eshop.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -22,6 +23,7 @@ public class PaymentActivity extends AppCompatActivity {
     EditText email;
     EditText phone;
     EditText postalCode;
+    BillingController billingController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +31,17 @@ public class PaymentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_payment);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        billingController = BillingController.getInstance();
+
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onPaymentClick(view);
+                if(onPaymentClick(view)) {
+                    Intent invoiceActivity = new Intent(PaymentActivity.this, InvoiceActivity.class);
+                    PaymentActivity.this.startActivity(invoiceActivity);
+                }
             }
         });
     }
@@ -43,18 +50,18 @@ public class PaymentActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 
-    public void onPaymentClick(View view){
+    public boolean onPaymentClick(View view){
         fillViews();
         if (isEmpty()){
             Snackbar.make(view, "Please fill the required fields", Snackbar.LENGTH_SHORT)
            .setAction("Action", null).show();
-            return;
+            return false;
         }
 
-        BillingController.getInstance().createCustomer(name.getText().toString(), email.getText().toString(),address.getText().toString(),
+        billingController.createCustomer(name.getText().toString(), email.getText().toString(),address.getText().toString(),
                 postalCode.getText().toString(), phone.getText().toString());
 
-
+        return true;
 
     }
 

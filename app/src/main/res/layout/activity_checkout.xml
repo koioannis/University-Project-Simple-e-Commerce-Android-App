@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.ActivityCheckout">
+        tools:context=".ui.CheckoutActivity">
 
     <android.support.design.widget.AppBarLayout
             android:layout_height="wrap_content"
@@ -53,6 +53,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_activity_checkout"/>
+    <include layout="@layout/content_checkout"/>
 
 </android.support.design.widget.CoordinatorLayout>

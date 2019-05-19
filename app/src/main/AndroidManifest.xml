@@ -9,13 +9,17 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".ui.InvoiceActivity"
+                  android:label="@string/title_activity_tool_bar"
+                  android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity
                 android:name=".ui.PaymentActivity"
                 android:label="@string/title_activity_payment"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".ui.ActivityCheckout"
+                android:name=".ui.CheckoutActivity"
                 android:label="@string/title_activity_checkout"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>

@@ -37,6 +37,10 @@ public class OrderController {
 
 	}
 
+	public Basket getBasket(){
+		return this.basket;
+	}
+
 	public int getProductsCount(){
 		List<Product> productsToOrder = basket.getProductsToOrder();
 		int count =0;

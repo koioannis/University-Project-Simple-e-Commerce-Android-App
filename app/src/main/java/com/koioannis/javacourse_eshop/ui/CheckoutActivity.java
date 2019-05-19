@@ -16,7 +16,7 @@ import com.koioannis.javacourse_eshop.bizlogic.OrderController;
 import java.text.DecimalFormat;
 
 
-public class ActivityCheckout extends AppCompatActivity {
+public class CheckoutActivity extends AppCompatActivity {
     private OrderController orderController;
     private BillingController billingController;
     private TextView totalCost;
@@ -41,8 +41,8 @@ public class ActivityCheckout extends AppCompatActivity {
         checkoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Intent paymentActivity = new Intent(ActivityCheckout.this, PaymentActivity.class);
-                ActivityCheckout.this.startActivity(paymentActivity);
+                Intent paymentActivity = new Intent(CheckoutActivity.this, PaymentActivity.class);
+                CheckoutActivity.this.startActivity(paymentActivity);
             }
         });
 

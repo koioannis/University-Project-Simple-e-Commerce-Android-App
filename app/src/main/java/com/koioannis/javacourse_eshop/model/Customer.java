@@ -13,4 +13,24 @@ public class Customer {
 		this.postalCode = postalCode;
 		this.telephone = telephone;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getPostalCode() {
+		return postalCode;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
 }

@@ -33,10 +33,10 @@
                 <TextView
                         android:text="PAYMENT INFORMATION"
                         android:textSize="24dp"
-                        android:fontFamily="@font/roboto_light"
+                        android:fontFamily="@font/roboto_bold"
                         android:layout_margin="12dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"/>
 
                 <EditText
                         android:layout_width="match_parent"
@@ -113,7 +113,7 @@
                 <TextView
                         android:text="DELIVERY INFORMATION"
                         android:textSize="24dp"
-                        android:fontFamily="@font/roboto_light"
+                        android:fontFamily="@font/roboto_bold"
                         android:layout_margin="12dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:id="@+id/textView"/>
@@ -158,7 +158,7 @@
                                 android:layout_marginStart="12dp"
                                 android:layout_marginTop="3dp"
                                 android:layout_marginBottom="6dp"
-                                android:inputType="text"
+                                android:inputType="numberSigned"
                                 android:hint="Postal Code"
                                 android:ems="10"
                                 android:id="@+id/postalCode" android:layout_weight="1"/>
@@ -174,7 +174,7 @@
                                 android:layout_marginEnd="12dp"
                                 android:layout_marginTop="6dp"
                                 android:layout_marginBottom="6dp"
-                                android:inputType="numberSigned"
+                                android:inputType="textEmailAddress"
                                 android:hint="email"
                                 android:ems="10"
                                 android:id="@+id/email" android:layout_weight="1"/>

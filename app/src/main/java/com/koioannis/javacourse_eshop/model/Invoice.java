@@ -2,6 +2,8 @@
 package com.koioannis.javacourse_eshop.model;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -9,107 +11,42 @@ import java.util.List;
 public class Invoice {
 	
 	private String seq;                     // the unique invoice number
-	private String firstName;
-	private String lastName;
-	private Customer customer;
-	private BigDecimal totalOrder;
+	private String customerName;
+	private double totalPrice;
+	private ArrayList<Integer> productsQuantity;
 	private List<Product> orderedProducts;
 	private Date date;
-	private BigDecimal amountReceived;
-	private BigDecimal amountDue;
 
-	
-	
-	
-	public Invoice() {
-	}
-
-	public Invoice(String seq, String firstName, String lastName, Customer customer, List<Product> orderedProducts) {
+	public Invoice(String seq, String customerName, List<Product> orderedProducts, double totalPrice) {
 		this.seq = seq;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.customer = customer;
+		this.customerName = customerName;
 		this.orderedProducts = orderedProducts;
+		this.totalPrice = totalPrice;
+		date = new Date();
 	}
-	
+
+	public String getDate(){
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
+		return dateFormat.format(date);
+	}
+
 	public String getSeq() {
 		return seq;
 	}
 
-	public Invoice(String seq) {
-		this.seq = seq;
+	public String getName() {
+		return customerName;
 	}
 
-	public void setSeq(String seq) {
-		this.seq = seq;
-	}
-	
-	public String getFirstName() {
-		return firstName;
+	public double getTotalPrice() {
+		return totalPrice;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public Customer getCustomer() {
-		return customer;
-	}
-
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
-
-	public BigDecimal getTotalOrder() {
-		return totalOrder;
-	}
-
-	public void setTotalOrder(BigDecimal totalOrder) {
-		this.totalOrder = totalOrder;
+	public ArrayList<Integer> getProductsQuantity() {
+		return productsQuantity;
 	}
 
 	public List<Product> getOrderedProducts() {
 		return orderedProducts;
 	}
-
-	public void setOrderedProducts(List<Product> orderedProducts) {
-		this.orderedProducts = orderedProducts;
-	}
-
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
-
-	public BigDecimal getAmountReceived() {
-		return amountReceived;
-	}
-
-	public void setAmountReceived(BigDecimal amountReceived) {
-		this.amountReceived = amountReceived;
-	}
-
-	public BigDecimal getAmountDue() {
-		return amountDue;
-	}
-
-	public void setAmountDue(BigDecimal amountDue) {
-		this.amountDue = amountDue;
-	}
-	
-	
-	
-	
-	
 }
