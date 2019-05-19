@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -33,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (orderController.getBasket().getProductsToOrder().isEmpty()){
+                    Snackbar.make(view, "Please add at least one product", Snackbar.LENGTH_SHORT)
+                            .setAction("Action", null).show();
+                    return;
+                }
                 Intent checkoutActivity = new Intent(MainActivity.this, CheckoutActivity.class);
                 MainActivity.this.startActivity(checkoutActivity);
             }
@@ -47,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         orderController.addProduct(tag);
         view.setBackgroundResource(R.drawable.ic_done);
     }
+
+
 
 
 }

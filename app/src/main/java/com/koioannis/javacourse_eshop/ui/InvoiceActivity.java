@@ -1,6 +1,7 @@
 package com.koioannis.javacourse_eshop.ui;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,11 @@ public class InvoiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invoice);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            View decor = getWindow().getDecorView();
+            decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        }
 
         orderController = OrderController.getInstance();
         billingController = BillingController.getInstance();
@@ -54,6 +60,8 @@ public class InvoiceActivity extends AppCompatActivity {
     }
 
     private void fillProducts(){
+        TextView totalCost = findViewById(R.id.totalCost);
+        totalCost.setText(billingController.getTotalPrice("FFF") + "€");
         LinearLayout invoiceProducts = findViewById(R.id.invoice_products);
         for (int i=0; i < orderController.getProductsCount(); i++){
 
@@ -63,10 +71,10 @@ public class InvoiceActivity extends AppCompatActivity {
             productName.setText(orderController.getProductName(i));
 
             TextView productQuantity = (TextView)invoiceProduct.getChildAt(1);
-            productQuantity.setText("x" + Integer.toString(orderController.getProductQuantity(i)));
+            productQuantity.setText("x" + orderController.getProductQuantity(i));
 
             TextView productPrice = (TextView)invoiceProduct.getChildAt(2);
-            productPrice.setText(Double.toString(orderController.getInitialProductPrice(i)));
+            productPrice.setText(orderController.getInitialProductPrice(i) + "€");
 
             invoiceProducts.addView(invoiceProduct);
         }

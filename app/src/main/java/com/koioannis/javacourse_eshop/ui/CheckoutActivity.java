@@ -71,7 +71,7 @@ public class CheckoutActivity extends AppCompatActivity {
     }
 
     protected void toMainActivity(View view){
-          super.onBackPressed();
+        super.onBackPressed();
     }
 
     protected void addQuantity(View view){
@@ -122,7 +122,7 @@ public class CheckoutActivity extends AppCompatActivity {
         if (productQuantity == 9 && isAdd)
             return false;
 
-        if (productQuantity == 0 && !isAdd) {
+        if (productQuantity == 1 && !isAdd) {
             return false;
         }
 
