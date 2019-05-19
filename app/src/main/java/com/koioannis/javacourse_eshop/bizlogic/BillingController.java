@@ -1,6 +1,7 @@
 package com.koioannis.javacourse_eshop.bizlogic;
 
 import com.koioannis.javacourse_eshop.model.Coupon;
+import com.koioannis.javacourse_eshop.model.Customer;
 
 import java.text.DecimalFormat;
 
@@ -11,6 +12,7 @@ public class BillingController {
     }
     private double totalPrice;
     private Coupon coupon;
+    private Customer customer;
 
     private BillingController(){
         totalPrice = 0.0;
@@ -30,5 +32,9 @@ public class BillingController {
         }
 
         return Double.parseDouble(decimalFormat.format(totalPrice));
+    }
+
+    public void createCustomer(String name, String email, String address, String postalCode, String telephone){
+        customer = new Customer(name, email, address, postalCode, telephone);
     }
 }

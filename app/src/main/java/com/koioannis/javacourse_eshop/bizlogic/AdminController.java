@@ -21,10 +21,10 @@ public class AdminController {
 
     private AdminController() {
         productList = new ArrayList<>();
-        productList.add (new Product ("01", new BigDecimal("600"), "SumSang Fridge"));
-        productList.add (new Product ("02", new BigDecimal("800"), "2019 8 core android"));
-        productList.add (new Product ("03", new BigDecimal("55.40"), "Import java.extra.cd"));
-        productList.add (new Product ("04", new BigDecimal("0.05"), "Antique Mips Chip"));
+        productList.add (new Product (new BigDecimal("600"), "SumSang Fridge"));
+        productList.add (new Product (new BigDecimal("800"), "2019 8 core android"));
+        productList.add (new Product (new BigDecimal("55.40"), "Import java.extra.cd"));
+        productList.add (new Product (new BigDecimal("0.05"), "Antique Mips Chip"));
         couponList = new ArrayList<>();
         couponList.add (new Coupon ("SummerOffer", 20));
         couponList.add (new Coupon ("NewUser12542", 25));

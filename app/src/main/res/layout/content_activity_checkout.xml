@@ -379,7 +379,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:layout_gravity="bottom|end"
-            android:background="@drawable/ripple_background"
+            android:background="@drawable/ripple_background_fab"
             android:text="checkout"
             android:padding="10dp"
             android:paddingEnd="20dp"
